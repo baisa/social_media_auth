@@ -4,5 +4,8 @@ Rails.application.config.middleware.use OmniAuth::Builder do
     scope: 'public_profile', info_fields: 'id,name,link'
   provider :google_oauth2, '623659842864-5nki3ajreivpngoa282j3174spbigsvc.apps.googleusercontent.com', '0yHZLSsg37YIZNxI1RWuvomy',
     scope: 'profile', access_type: 'online', name: 'google'
+  provider :linkedin, '77wmao2xhfvc0o', 'uBM5RI3wVy3dPFMW',
+    scope: 'r_basicprofile',
+    fields: ['id', 'first-name', 'last-name', 'location']
 
 end
